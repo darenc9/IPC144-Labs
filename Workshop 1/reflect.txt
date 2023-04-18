@@ -1,0 +1,24 @@
+//******************************************************************
+//		IPC144 Workshop: Workshop 1 Part-2: Reflection
+// Full Name  : Devon Chan
+// Student ID#: 066869132
+// Email      : dchen80@myseneca.ca
+// Section    : IPC144 NBB
+// 
+// Authenticity Declaation:
+// I declare this submission is the result of my own work and has not been
+// shared with any other student or 3rd party content provider. This submitted
+// piece of work is entirely of my own creation.
+//******************************************************************
+
+1. I learned how to use Visual Studio 2022 to create basic C programs, and
+learned how to utilize the 'printf' function from the stdio.h library 
+to print all sorts of texts, and special characters ASCII encoded characters.
+
+2. SSH (Secure Shell) is a network protocol, and I learned to use it to
+connect to the Seneca Matrix server, and learned how to use the many different linux
+commands to navigate through the server, compile programs, and submit my work.
+
+3. SFTP (Secure File Transfer Protocol) is a network protocol similar to SSH,
+but it allows me to access and transfer files to different servers. I utilized
+the SFTP to transfer my workshop files to the Seneca Matrix Server.

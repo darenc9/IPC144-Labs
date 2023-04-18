@@ -1,0 +1,50 @@
+*****************************************************************************
+                              Reflection
+                          Workshop - #2 (P2)
+Full Name  : Devon Chan
+Student ID#: 066869132
+Email      : dchen80@myseneca.ca
+Section    : NBB
+
+Authenticity Declaration:
+I declare this submission is the result of my own work and has not been
+shared with any other student or 3rd party content provider. This submitted
+piece of work is entirely of my own creation.
+*****************************************************************************
+
+1. 
+The reason cents2 does not represent the value of price2 in cents is because
+of the way floating point variables stores data.
+cents2 value returns as 10.11999999... instead of 10.12 for that reason.
+
+2.
+In my solution, I made the variable int coins to represent the amount of coins
+used. I will now use coins to represent the amount of $20 bills.
+int excTaxBalance is the daily sales balance excluding tax in cents. 
+coins = subTotal / 2000;
+excTaxBalance = % 2000;
+printf("Twenties %3d %9.4lf\n", coins, (float)excTaxBalance / 100);
+
+3.
+The first way would be to break down the total cents variable into two int variables:
+one variable containing the dollar value, and one containing the cents value
+using the division and modulus operator. 
+For example:
+Assuming:
+int smallPrice = 1796;
+int smallPriceDollars = smallPrice / 100;
+int smallPriceCents = smallPrice % 100;
+printf("Small Price: $%d.%d", smallPriceDollars, smallPriceCents);
+
+The second way is simliar to the first way, but we don't have to breakdown
+the variable into seperate variables. We can just use the division and 
+modulus operator within the printf statement:
+int smallPrice = 1796;
+printf("Small Price: $%d.%d", smallPrice/100, smallPrice%100);
+
+The third way is using Promotion. For example, i made a varible,
+double price, and promoted smallPrice to a double so it can handle
+the cash, and cents format. 
+double price;
+price = smallPrice;
+printf("Small Price: %.2f", price / 100);

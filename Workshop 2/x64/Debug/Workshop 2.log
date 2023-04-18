@@ -1,0 +1,5 @@
+﻿  w2p2.c
+C:\Users\devon\OneDrive\School\IPC144NBB\Workshop 2\w2p2.c(63,34): warning C4244: '=': conversion from 'const double' to 'int', possible loss of data
+C:\Users\devon\OneDrive\School\IPC144NBB\Workshop 2\w2p2.c(65,34): warning C4244: '=': conversion from 'const double' to 'int', possible loss of data
+C:\Users\devon\OneDrive\School\IPC144NBB\Workshop 2\w2p2.c(67,34): warning C4244: '=': conversion from 'const double' to 'int', possible loss of data
+  Workshop 2.vcxproj -> C:\Users\devon\OneDrive\School\IPC144NBB\Workshop 2\x64\Debug\Workshop 2.exe
