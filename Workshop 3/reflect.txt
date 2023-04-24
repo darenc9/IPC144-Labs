@@ -1,0 +1,55 @@
+*****************************************************************************
+                              Reflection
+                          Workshop - #3 (P2)
+Full Name  : Devon Chan
+Student ID#: 066869132
+Email      : dchen80@myseneca.ca		
+Section    : NBB
+
+Authenticity Declaration:
+I declare this submission is the result of my own work and has not been
+shared with any other student or 3rd party content provider. This submitted
+piece of work is entirely of my own creation.
+*****************************************************************************
+
+1.
+The expression I had most difficulty to code was the one that compared
+the user-input of the typical number of daily servings and compared that with
+the coffee that's being sold today, and compared it to the mapping rules
+provided in the instructions:
+((dailyServings >= 1 && dailyServings <= 4) && (bagWeight1 <= 250)) || ((dailyServings >= 4 && dailyServings <= 9) && (bagWeight1 == 500)) || ((dailyServings >= 10) && (bagWeight1 == 1000))
+If the user-input was 6, this expression would output '0' on the table for product ID1, Packaged Bag Weight.
+My expression can be broken down into three parts:
+	a. Checks if user-input dailyServings equals 1 to 4, and if bagWeight1(Coffee Package Weight for Product1) is 250 or less.
+	b. Checks if dailyServings equals 5 to 9, and if bagWeight1 is 500g.
+	c. Checks if dailyServings equals to 10 or more, and if bagWeight is 1000g.
+
+2.
+I will be using my code from line 81:
+coffeeType1 == 'L' || coffeeType1 == 'l'
+The output of this code is printed into %d for Coffee Type Light, Product ID 1
+in the product data table.
+The purpose of this code is to check if the user-input (coffeeType1) is light.
+
+Using deMorgan's Law:
+!(coffeeType1 == 'L' && coffeeType1 == 'l')
+
+I can also change my expression to:
+coffeeType1 != 'B' && coffeeType1 !='b'
+Since there is only two coffee types: Light, and Blend; I can check
+if the coffeeType is not blend. If it's not blend, then it has to be light.
+
+
+3.
+It is preferred because in the code there is only one instance where we need
+to have the Fahrenheit value used, and its in the product data table. Since
+we only need to use the data once, it makes more since to just calculate the
+Fahrenheit for the table without storing the values to a variable. This will
+save memory for our code, and make our code more concise and simple.
+
+Also, converting celsius to fahrenheit is a very simple calculation, so
+storing the calculated result to a variable isn't needed, and can cause issues
+with managing all the declared variables. It is simplier to make the calculation
+whenever the fahrenheit value is needed. The same applies for Part-1, because
+calculating the average cost is very simple calculation, there isn't a need
+to store it as a variable.

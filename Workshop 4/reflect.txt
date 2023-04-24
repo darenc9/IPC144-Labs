@@ -1,0 +1,149 @@
+*****************************************************************************
+                               Reflection
+                             Workshop - #4
+Full Name  : Devon Chan
+Student ID#: 066869132
+
+Authenticity Declaration:
+I declare this submission is the result of my own work and has not been
+shared with any other student or 3rd party content provider. This submitted
+piece of work is entirely of my own creation.
+*****************************************************************************
+
+1.
+Selection constructions are very important because these constructs can
+solve more complex problems by letting us execute certain commands
+under certain conditions. 
+Example 1:
+            if (applesPicked <= 0)
+            {
+                printf("ERROR: You must pick at least 1!\n");
+            }
+            else if (applesPicked > apples)
+            {
+                printf("You picked too many... only %d more APPLE(S) are needed.\n", apples);
+            }
+For example 1, I was able to add error checks to my program by checking for if applesPicked was 0,
+and if they picked more apples then they needed.
+
+Example 2:
+                if (pears > 0)
+                {
+                    printf("Looks like we still need some PEARS...\n");
+                }
+                else
+                {
+                    printf("Great, that's the pears done!\n\n");
+                }
+For example 2, I used the selection construct to output a text to the user depending on the
+amount of pears the user picked up. If the user still needs more pears, we would tell them that,
+but if the user picked up enough pears then a more appropriate message would be given.
+
+Example 3:
+		else if (applesPicked <= apples)
+            {
+                apples = apples - applesPicked;
+                if (apples > 0)
+                {
+                    printf("Looks like we still need some APPLES...\n");
+                }
+                else
+                {
+                    printf("Great, that's the apples done!\n\n");
+                }
+		}
+For example 3, I was able to check if the amount of apples we needed was greater than or equal to
+the number of apples we picked up. If we meet this condition, we would further check if we need
+to pick up more apples, or if we are finished picking up apples for this shopping session.
+
+2.
+A nested construct is when we have one logic construct within another logic construct. A construct
+would be for example, selection construct (if, else if, else), or iteration constructs (while, for,
+do while).
+Example 1:
+		else if (applesPicked <= apples)
+            {
+                apples = apples - applesPicked;
+                if (apples > 0)
+                {
+                    printf("Looks like we still need some APPLES...\n");
+                }
+                else
+                {
+                    printf("Great, that's the apples done!\n\n");
+                }
+		}
+For example 1, I was able to check if the amount of apples we needed was greater than or equal to
+the number of apples we picked up. This is our first logic construct. If we meet the conditions
+for our first logic construct, we would further check if we need to pick up more apples,
+or if we are finished picking up apples for this shopping session as our second logic construct.
+Thus, we utilized a logic construct within a logic construct to make our program smarter and more
+adaptable for user input and user error.
+
+Example 2:
+        while (apples > 0)
+        {
+            printf("Pick some APPLES... how many did you pick? : ");
+            scanf("%d", &applesPicked);
+            if (applesPicked <= 0)
+            {
+                printf("ERROR: You must pick at least 1!\n");
+            }
+For example 2, we have a selection construct nested inside of an iteration construct. The goal
+of this piece of code is to if the user needs any apples for today's shopping, and if we meet
+this condition, then we ask and check how many apples the user picked up. We then check
+if the user has picked up at least one apple, and give out an error message if they didn't
+pick up any apples.
+
+3.
+My favourite iteration construct is the while loop. The while loop is able to do iteration
+loops that for loop and do loops can do, and I feel is the most versatile. During this
+workshop the only loop I used was the while loop. 
+
+I will show an example of all three loops:
+While Loop:
+        printf("How many APPLES do you need? : ");
+        scanf("%d", &apples);
+        while (apples < 0)
+        {
+            printf("ERROR: Value must be 0 or more.\n");
+            printf("How many APPLES do you need? : ");
+            scanf("%d", &apples);
+        }
+The while loop above was taken from my workshop 4 program, and it's a simple iteration loop,
+and after recieving user input on how many apples the user need, it checks if the value is 0
+or more.
+
+Do While Loop:
+	int apples;
+	do {
+		printf("How many APPLES do you need? : ");
+		scanf("%d", &apples);
+		if (apples < 0)
+		{
+			printf("ERROR: Value must be 0 or more.\n");
+		}
+	} while (apples < 0);
+For this do while loop, I rewrote my while loop example to complete the same logic but using
+the do while construct. This loop is a little more complicated because I had to make an
+if statement within the loop. Efficiency-wise it seems to be the same as the while loop.
+
+For Loop:
+	for (; apples < 0;)
+	{
+
+		if (apples < 0)
+		{
+			printf("ERROR: Value must be 0 or more.\n");
+			printf("How many APPLES do you need? : ");
+			scanf("%d", &apples);
+		}
+	}
+This for loop is a rewrite of my original while loop. This loop completes the same logic,
+but it uses the for construct.
+Typically for loops utilize 3 values: for (initialization; condition; change). However,
+I was attempting to make this for loop loop forever if the condition is not met,
+and because the "change" factor is done through the user input from the scanf function,
+it was left empty. This shows that for loop may become very useful if I want a loop
+to loop a specified amount of times, but if I want my loop to run indefinitely until a
+certain condition is meet then while loop makes more sense. 
